@@ -55,10 +55,6 @@ public class ConfigManager {
         return properties.getProperty(key);
     }
 
-    public static void setProperty(String key, String value) {
-        properties.setProperty(key, value);
-    }
-
     public static String getLocator(String key) {
         return locators.getProperty(key);
     }
