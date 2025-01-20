@@ -53,6 +53,12 @@ public class SignUpSteps extends DriverBase {
         SignUpPage.verifyInvalidEmailId();
     }
 
+    @Then("Verify that password is not matching")
+    public static void validatePwdMismatch() {
+        logger.info("Verify password mismatch for Confirm Password field");
+        SignUpPage.verifyPwdMismatch();
+    }
+
     @Then("Verify that error is displayed for all fields")
     public static void validateThatErrorIsDisplayedForAllFields() {
         logger.info("Verifying error for all fields");

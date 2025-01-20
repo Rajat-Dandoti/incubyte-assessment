@@ -1,28 +1,14 @@
 @signin
 Feature: Sign In
 
-  Background: Ensure user is registered
-    Given User navigate-to "https://magento.softwaretestingboard.com/"
-    And User clicks on "LP_CreateAccount_link"
-
-    And User enters value: "Test" in field: "FirstName_field"
-    And User enters value: "One" in field: "LastName_field"
-
-    And User enters unique email address in field "EmailAddress_field"
-    And User enters value: "TestMag@1234" in field: "Password_field"
-    And User enters value: "TestMag@1234" in field: "ConfirmPassword_field"
-
-    When User clicks on "CreateAccount_button"
-    Then Verify sign up is successful
-    And User clicks on "Welcome_dropdown_button"
-    And User clicks on "SignOut_button"
-
-  Scenario: Sign In With Newly Registered User
+  Scenario: Invalid Sign In - Unregistered User
 
     Given User navigate-to "https://magento.softwaretestingboard.com/"
     And User clicks on "LP_SignIn_link"
 
-    And User sign in with newly registered email address
+    And User enters value: "testrrd1@hmail.com" in field: "SignIn_EmailAddress_field"
+    And User enters value: "TestMag@1234" in field: "SignIn_Pwd_field"
 
     When User clicks on "SignIn_button"
-    Then Verify sign in is successful
+
+    Then Verify sign in is unsuccessful due to wrong password or unregistered user

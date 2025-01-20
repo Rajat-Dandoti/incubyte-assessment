@@ -51,6 +51,11 @@ public class SignUpPage extends DriverBase {
         }
     }
 
+    public static void verifyPwdMismatch() {
+        String errorMsg = "Please enter the same value again.";
+        Assert.assertEquals(driver.findElement(byLocator("ConfirmPwd_fieldError")).getText(), errorMsg);
+    }
+
     public static void verifyErrorForAllFields() {
         String errorMsg = "This is a required field.";
 
