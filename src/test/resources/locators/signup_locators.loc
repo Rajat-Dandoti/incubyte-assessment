@@ -1,0 +1,19 @@
+LP_CreateAccount_link = //a[text()='Create an Account']
+
+FirstName_field = //input[@id='firstname']
+LastName_field = //input[@id='lastname']
+EmailAddress_field = //input[@id='email_address']
+Password_field = //input[@id='password']
+ConfirmPassword_field = //input[@id='password-confirmation']
+CreateAccount_button = //button[@title='Create an Account']
+
+CreateAccount_SuccessMsg = //div[@class='messages' and @role='alert']
+Welcome_dropdown_text = //span[@class='logged-in']
+
+FirstName_fieldError = //div[@id='firstname-error']
+LastName_fieldError = //div[@id='lastname-error']
+EmailAddress_fieldError = //div[@id='email_address-error']
+Password_fieldError = //div[@id='password-error']
+ConfirmPwd_fieldError = //div[@id='password-confirmation-error']
+
+DuplicateUser_ErrorMsg = //div[contains(text(),'There is already an account with this email address.')]

@@ -1,0 +1,13 @@
+LP_SignIn_link = (//a[contains(text(),'Sign In')])[1]
+
+SignIn_EmailAddress_field = //input[@name='login[username]']
+SignIn_Pwd_field = //input[@name='login[password]']
+SignIn_button = (//button[@id='send2'])[1]
+
+SignIn_ErrorMsg = //div[@class='messages' and @role='alert']
+
+SignIn_Email_ErrorMsg = //div[@id='email-error']
+SignIn_Pwd_ErrorMsg = //div[@id='pass-error']
+
+Welcome_dropdown_button = (//button[@class='action switch'])[1]
+SignOut_button = (//a[contains(text(),'Sign Out')])[1]
