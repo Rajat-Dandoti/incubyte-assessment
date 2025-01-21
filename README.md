@@ -14,6 +14,8 @@ A test automation framework for Magento e-commerce platform using Selenium WebDr
 ## Project Structure
 
 ```
+artifacts/                          # Test cases and execution video
+reports/                            # Sample execution report
 src/
 ├── main/
 │   ├── java/
@@ -30,7 +32,8 @@ src/
     │       ├── runner/             # Test runner
     │       └── step_def/           # Step definitions
     └── resources/
-        └── locators/              # Element locator files
+        └── locators/               # Element locator files
+
 ```
 
 ## Prerequisites
@@ -53,7 +56,7 @@ mvn clean install
 Edit application.properties:
 ```properties
 browser = chrome         # chrome or edge
-web_driver_wait = 10    # explicit wait timeout in seconds
+web_driver_wait = 10     # explicit wait timeout in seconds
 ```
 
 ## Running Tests
@@ -73,7 +76,7 @@ mvn test -Dcucumber.filter.tags="@signin"  # Run only signin tests
 
 HTML test reports are generated at:
 ```
-target/reports/cucumber-report.html
+reports/cucumber-report.html
 ```
 
 ## Logging
@@ -98,3 +101,8 @@ created_users.log
 - Cucumber 7.20.1
 - TestNG
 - Maven
+
+## Artifacts
+
+- Test Cases in Excel sheet
+- Test execution video
